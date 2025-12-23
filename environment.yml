@@ -1,0 +1,16 @@
+name: dl-exp
+channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+  - defaults
+dependencies:
+  - python=3.11
+  - torchaudio
+  - torchvision
+  - pytorch-cuda=12.1
+  - pytorch
+  - pandas
+  - matplotlib
+prefix: /home/xjj/anaconda3/envs/dl-exp
