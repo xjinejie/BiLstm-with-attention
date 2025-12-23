@@ -101,7 +101,7 @@ pip install pyyaml
 
 The `environment.yml` file includes:
 - Python 3.11
-- PyTorch with CUDA 12.1 support (pytorch-cuda=12.1)
+- PyTorch with CUDA 12.1 support (via pytorch-cuda=12.1 package)
 - TorchVision and TorchAudio
 - Pandas for data processing
 - Matplotlib for visualization
@@ -165,8 +165,10 @@ For distributed training across multiple GPUs:
 
 **Important**: Before running, modify the `world_size` parameter in `train_distributed.py` to match your number of GPUs.
 
+Open `train_distributed.py` and locate line 392:
+
 ```python
-# In train_distributed.py, line 392
+# In train_distributed.py, at line 392
 world_size = 8  # Change this to your GPU count (e.g., 2, 4, 8)
 ```
 
@@ -333,7 +335,7 @@ pip install pyyaml
 
 `environment.yml` 文件包含：
 - Python 3.11
-- 支持CUDA 12.1的PyTorch（pytorch-cuda=12.1）
+- 支持CUDA 12.1的PyTorch（通过pytorch-cuda=12.1包）
 - TorchVision和TorchAudio
 - 用于数据处理的Pandas
 - 用于可视化的Matplotlib
@@ -396,6 +398,8 @@ python train.py
 在多个GPU上进行分布式训练：
 
 **重要提示**：运行前，请修改 `train_distributed.py` 中的 `world_size` 参数以匹配您的GPU数量。
+
+打开 `train_distributed.py` 并找到第392行：
 
 ```python
 # 在 train_distributed.py 的第392行
