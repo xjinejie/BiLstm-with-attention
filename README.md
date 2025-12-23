@@ -101,7 +101,7 @@ pip install pyyaml
 
 The `environment.yml` file includes:
 - Python 3.11
-- PyTorch with CUDA 12.1 support
+- PyTorch with CUDA 12.1 support (pytorch-cuda=12.1)
 - TorchVision and TorchAudio
 - Pandas for data processing
 - Matplotlib for visualization
@@ -116,10 +116,12 @@ base:
   test_path: dataset/test.json
   max_vocab_size: 50000
   max_len: 256
+  min_freq: 5
   batch_size: 64
   epochs: 15
   learning_rate: 0.001
   device: cuda
+  seed: 42
   embed_dim: 256
   hidden_dim: 256
   n_layers: 2
@@ -331,7 +333,7 @@ pip install pyyaml
 
 `environment.yml` 文件包含：
 - Python 3.11
-- 支持CUDA 12.1的PyTorch
+- 支持CUDA 12.1的PyTorch（pytorch-cuda=12.1）
 - TorchVision和TorchAudio
 - 用于数据处理的Pandas
 - 用于可视化的Matplotlib
@@ -346,10 +348,12 @@ base:
   test_path: dataset/test.json
   max_vocab_size: 50000
   max_len: 256
+  min_freq: 5
   batch_size: 64
   epochs: 15
   learning_rate: 0.001
   device: cuda
+  seed: 42
   embed_dim: 256
   hidden_dim: 256
   n_layers: 2
